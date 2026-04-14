@@ -1,0 +1,98 @@
+/* ── DONOR DASHBOARD ─────────────────────────────────────── */
+.donor-welcome {
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 60%, var(--color-primary-light) 100%);
+  border-radius: var(--radius-xl); padding: 24px;
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 24px; overflow: hidden; position: relative;
+  box-shadow: var(--shadow-primary);
+}
+.donor-welcome::before {
+  content: ''; position: absolute; right: -20px; top: -20px;
+  width: 120px; height: 120px; border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+}
+.donor-welcome::after {
+  content: ''; position: absolute; right: 40px; bottom: -30px;
+  width: 80px; height: 80px; border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+}
+.welcome-avatar {
+  width: 52px; height: 52px; border-radius: 14px;
+  background: rgba(255,255,255,0.2); display: flex; align-items: center;
+  justify-content: center; color: white; font-size: 24px; font-weight: 800;
+  flex-shrink: 0; border: 2px solid rgba(255,255,255,0.3);
+}
+.welcome-text { flex: 1; z-index: 1; }
+.welcome-greeting { font-size: 13px; color: rgba(255,255,255,0.7); font-weight: 500; }
+.welcome-name { font-size: 22px; font-weight: 800; color: white; line-height: 1.2; margin-top: 2px; letter-spacing: -0.3px; }
+.welcome-notif-btn {
+  position: relative; width: 44px; height: 44px; border-radius: 50%;
+  background: rgba(255,255,255,0.2); border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; color: white;
+  transition: all 0.2s; flex-shrink: 0; z-index: 1;
+}
+.welcome-notif-btn:hover { background: rgba(255,255,255,0.3); transform: scale(1.1); }
+.notif-dot {
+  position: absolute; top: 6px; right: 6px; width: 10px; height: 10px;
+  background: #FEF08A; border-radius: 50%; border: 2px solid transparent;
+  animation: pulse 2s ease infinite;
+}
+
+/* Stats Grid */
+.stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 24px; }
+
+/* Quick Actions */
+.quick-actions { display: flex; gap: 10px; margin-bottom: 28px; overflow-x: auto; padding-bottom: 4px; }
+.quick-action-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 16px 20px; border-radius: var(--radius-md); border: 1.5px solid var(--border);
+  background: var(--surface); cursor: pointer; transition: all 0.25s; flex-shrink: 0;
+  min-width: 90px; box-shadow: var(--shadow-sm); font-family: inherit;
+}
+.quick-action-btn:hover { border-color: var(--color-primary); transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.quick-action-btn.primary { background: var(--color-primary); border-color: var(--color-primary); }
+.quick-action-btn.primary .qa-label { color: white; }
+.quick-action-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center; font-size: 22px;
+}
+.qa-icon-green  { background: var(--color-primary-alpha); color: var(--color-primary); }
+.qa-icon-amber  { background: var(--color-secondary-alpha); color: #B45309; }
+[data-theme="dark"] .qa-icon-amber { color: #FCD34D; }
+.qa-icon-white  { background: rgba(255,255,255,0.2); color: white; font-size: 20px; }
+.qa-label { font-size: 11px; font-weight: 600; color: var(--text-secondary); letter-spacing: 0.2px; }
+
+/* Donation Cards */
+.donation-item {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px; background: var(--surface); border-radius: var(--radius-md);
+  border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+  transition: all 0.25s; margin-bottom: 10px;
+}
+.donation-item:hover { box-shadow: var(--shadow-md); border-color: var(--color-primary); transform: translateX(3px); }
+.donation-item-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: var(--color-primary-alpha);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-primary); flex-shrink: 0; font-size: 22px;
+}
+.donation-item-info { flex: 1; min-width: 0; }
+.donation-item-name { font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.donation-item-meta { font-size: 12px; color: var(--text-secondary); display: flex; align-items: center; gap: 4px; }
+
+/* Activity Timeline */
+.activity-timeline { display: flex; flex-direction: column; gap: 0; }
+.activity-entry {
+  display: flex; gap: 14px; align-items: flex-start; padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.activity-entry:last-child { border-bottom: none; }
+.activity-dot-col { display: flex; flex-direction: column; align-items: center; gap: 0; }
+.activity-dot {
+  width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 14px;
+}
+.activity-line { width: 2px; flex: 1; background: var(--border); min-height: 20px; }
+.activity-entry:last-child .activity-line { display: none; }
+.activity-text { font-size: 14px; color: var(--text-primary); font-weight: 500; margin-bottom: 3px; }
+.activity-time { font-size: 12px; color: var(--text-tertiary); }

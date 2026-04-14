@@ -1,0 +1,71 @@
+export const indianStates = [
+  'Andhra Pradesh',
+  'Arunachal Pradesh',
+  'Assam',
+  'Bihar',
+  'Chhattisgarh',
+  'Goa',
+  'Gujarat',
+  'Haryana',
+  'Himachal Pradesh',
+  'Jharkhand',
+  'Karnataka',
+  'Kerala',
+  'Madhya Pradesh',
+  'Maharashtra',
+  'Manipur',
+  'Meghalaya',
+  'Mizoram',
+  'Nagaland',
+  'Odisha',
+  'Punjab',
+  'Rajasthan',
+  'Sikkim',
+  'Tamil Nadu',
+  'Telangana',
+  'Tripura',
+  'Uttar Pradesh',
+  'Uttarakhand',
+  'West Bengal'
+];
+
+const stateDistricts = {
+  'Tamil Nadu': [
+    'Chennai',
+    'Coimbatore',
+    'Cuddalore',
+    'Dharmapuri',
+    'Dindigul',
+    'Erode',
+    'Kanchipuram',
+    'Kanyakumari',
+    'Karur',
+    'Krishnagiri',
+    'Madurai',
+    'Nagapattinam',
+    'Namakkal',
+    'Nilgiris',
+    'Perambalur',
+    'Pudukkottai',
+    'Ramanathapuram',
+    'Salem',
+    'Sivaganga',
+    'Thanjavur',
+    'Theni',
+    'Thoothukudi',
+    'Tiruchirappalli',
+    'Tirunelveli',
+    'Tiruppur',
+    'Tiruvallur',
+    'Tiruvannamalai',
+    'Tiruvarur',
+    'Vellore',
+    'Viluppuram',
+    'Virudhunagar'
+  ],
+  // Add districts for other states as needed
+};
+
+export const getDistricts = (state) => {
+  return stateDistricts[state] || [];
+};
